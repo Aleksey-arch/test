@@ -1,0 +1,146 @@
+.progress_container {
+  display: flex;
+  width: 100%;
+  height: auto;
+  max-width: 568px;
+  min-width: 260px;
+  min-height: 202px;
+  border: 1px solid #b2dddd;
+  margin: 50px auto;
+  padding: 20px;
+}
+
+.progress_indicator {
+  position: relative;
+  padding: 20px;
+  width: 50%;
+  min-height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.buttons_wrapper--heading {
+  font-size: 18px;
+  font-weight: 500;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: #464545;
+}
+
+.progress_ring--circle {
+  transform-origin: center;
+  transform: rotate(-90deg);
+  transition: stroke-dashoffset 0.3s;
+}
+
+.progress_buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+  width: 50%;
+}
+
+.buttons_wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.container_buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.buttons_input {
+  text-align: center;
+  width: 52px;
+  height: 24px;
+  border-radius: 12px;
+  border: 2px solid #bfbfbf;
+  padding: 0 3px;
+  appearance: none;
+  color: #737171;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.switch_btn {
+  display: inline-block;
+  width: 52px;
+  height: 24px;
+  border-radius: 12px;
+  background: #bfbfbf;
+  z-index: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition-duration: 300ms;
+}
+
+.switch_btn::after {
+  content: "";
+  height: 20px;
+  width: 20px;
+  border-radius: 18px;
+  background: #fff;
+  top: 2px;
+  left: 2px;
+  transition-duration: 300ms;
+  box-shadow: 0 0 10px 0 #999999;
+  position: absolute;
+  z-index: 1;
+}
+
+.switch_on {
+  background-color: #21d7e4;
+  transition: background-color 0.3s ease-in;
+}
+
+.switch_on::after {
+  left: 30px;
+}
+
+.animated_true {
+  transform: rotate(90deg);
+  transition: transform 0.3s ease-in;
+  animation: rotation 1s infinite linear;
+}
+
+.progress_ring--hide-active {
+  display: none;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 572px) {
+  .progress_container{
+    flex-direction: column;
+  }
+  .progress_indicator {
+    width: 100%;
+    justify-content: center;
+  }
+  .progress_buttons {
+    width: 100%;
+   align-items: center;
+  }
+}

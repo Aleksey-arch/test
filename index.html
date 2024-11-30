@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Block</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+
+<body>
+    <div class="progress_container">
+        <div class="progress_indicator">
+            <h2 class="buttons_wrapper--heading">Progress:</h2>
+            <svg class="progress_ring" width="120" height="120">
+                <circle class="progress_ring--circle-shadow" stroke="#999999" stroke-width="8" stroke-linecap="round" cx="60" cy="60" r="52" fill="transparent" />
+                <circle class="progress_ring--circle" stroke="#21d7e4" stroke-width="8" stroke-linecap="round" cx="60" cy="60" r="52" fill="transparent" />
+            </svg>
+        </div>
+        <div class="progress_buttons">
+            <div class="container_buttons">
+            <div class="buttons_wrapper">
+
+                <input min="0" max="100" type="number" class="buttons_input" value="60" >
+                <p>Value</p>
+            </div>
+            <div class="buttons_wrapper">
+                <div class="switch_btn switch_btn--animated  "></div>
+                <p>Animated</p>
+            </div>
+            <div class="buttons_wrapper">
+                <div class="switch_btn switch_btn--hide "></div>
+                <p>Hide</p>
+            </div>
+            </div>
+            
+
+
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
